@@ -7,10 +7,32 @@ const typeDefs = gql`
     username: String!
     age: Int!
     nationality: String!
+    favoriteMovies: [Movie]
+  }
+
+  type Movie {
+    id: ID!
+    name: String!
+    yearOfPublication: Int!
+    isInTheaters: Boolean!
   }
   
   type Query {
     users: [User!]!
+    user(id: ID!): User!
+    movies: [Movie!]!
+    movie(name: String!): Movie!
+  }
+
+  input CreateUserInput {
+    name: String!
+    username: String!
+    age: Int!
+    nationality: String!
+  }
+
+  type Mutation {
+    createUser(input: CreateUserInput!): User!
   }
 `
 

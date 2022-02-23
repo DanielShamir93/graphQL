@@ -22,4 +22,25 @@ const UsersList = [
   },
 ]
 
-module.exports = { UsersList };
+const MoviesList = [
+  {
+    id: 1,
+    name: "avengers Endgame",
+    yearOfPublication: 2019,
+    isInTheaters: true
+  },
+  {
+    id: 2,
+    name: "Interstellar",
+    yearOfPublication: 2002,
+    isInTheaters: false
+  },
+  {
+    id: 3,
+    name: "Superbad",
+    yearOfPublication: 2009,
+    isInTheaters: true
+  }
+]
+
+module.exports = { UsersList, MoviesList };
